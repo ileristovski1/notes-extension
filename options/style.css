@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+  }
+  
+  .auth-container label {
+    font-weight: bold;
+  }
+  
+  .auth-container input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+
+
+
+
+/* Path: NOTES */
+
+.notes-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .notes-wrapper h2 {
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .notes-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .notes-wrapper ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notes-wrapper li {
+    margin-bottom: 20px;
+  }
+  
+  .notes-wrapper li div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .notes-wrapper li div:first-child {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  
+  .notes-wrapper li div:last-child {
+    margin-top: 10px;
+  }
+  
+  
