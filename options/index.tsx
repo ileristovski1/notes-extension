@@ -210,19 +210,19 @@ function IndexOptions() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-
-                  <button
-                    onClick={(e) => {
-                      handleEmailLogin("SIGNUP", username, password)
-                    }}>
-                    Sign up
-                  </button>
-                  <button
+                  <Button
+                    colorScheme={"blue"}
                     onClick={(e) => {
                       handleEmailLogin("LOGIN", username, password)
                     }}>
                     Login
-                  </button>
+                  </Button>
+                  <Button
+                    onClick={(e) => {
+                      handleEmailLogin("SIGNUP", username, password)
+                    }}>
+                    Sign up
+                  </Button>
 
                   {/* <button
                 onClick={(e) => {
