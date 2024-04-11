@@ -227,13 +227,6 @@ function IndexOptions() {
                     }}>
                     Sign up
                   </Button>
-
-                  {/* <button
-                onClick={(e) => {
-                  handleOAuthLogin("github")
-                }}>
-                Sign in with GitHub
-              </button> */}
                 </>
               )}
             </div>
