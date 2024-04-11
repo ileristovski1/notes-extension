@@ -12,7 +12,6 @@ import type { Note } from "../types"
 import "./style.css"
 
 import {
-  Avatar,
   Button,
   ButtonGroup,
   ChakraProvider,
@@ -20,6 +19,7 @@ import {
   EditablePreview,
   EditableTextarea,
   Stack,
+  Tag,
   WrapItem
 } from "@chakra-ui/react"
 
@@ -58,6 +58,10 @@ function IndexOptions() {
 
     init()
   }, [])
+
+  useEffect(() => {
+    fetchNotes()
+  }, [notes])
 
   const handleEmailLogin = async (
     type: "LOGIN" | "SIGNUP",
@@ -237,8 +241,9 @@ function IndexOptions() {
         ) : (
           <div className="notes-wrapper">
             <WrapItem>
-              <p>{user.email}</p>
-              <Avatar name={user.email} src="https://bit.ly/dan-abramov" />
+              <Tag size={"md"} key={"md"} variant="solid" colorScheme="blue">
+                {user.email}
+              </Tag>
             </WrapItem>
             <div>
               <h3>My Notes: {notes.length}</h3>
@@ -250,14 +255,14 @@ function IndexOptions() {
                       <EditableTextarea />
                     </Editable>
                     <Button
-                      colorScheme="teal"
+                      colorScheme="blue"
                       variant="ghost"
                       size="xs"
                       onClick={() => updateNote(note.id, note.content)}>
                       Update
                     </Button>
                     <Button
-                      colorScheme="teal"
+                      colorScheme="blue"
                       variant="ghost"
                       size="xs"
                       onClick={() => deleteNote(note.id)}>
